@@ -1,5 +1,6 @@
 package com.kavindu.order.controllers;
 
+import com.kavindu.order.common.orderResponse;
 import com.kavindu.order.dtos.orderDto;
 import com.kavindu.order.services.orderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class orderContoller {
     }
 
     @PostMapping("/create")
-    public orderDto createOrder(@RequestBody orderDto orderDto){
+    public orderResponse createOrder(@RequestBody orderDto orderDto){
         return  orderService.CreateOrder(orderDto);
     }
 

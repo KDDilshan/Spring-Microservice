@@ -26,7 +26,7 @@ public class inventoryService {
     }
 
     public inventoryDto getoneProduct(int id) {
-        inventory inventroryProduct= inventoryRepo.findById(id).get();
+        inventory inventroryProduct= inventoryRepo.findByItemId(id);
         return modelMapper.map(inventroryProduct, new TypeToken<inventoryDto>(){}.getType());
     }
 

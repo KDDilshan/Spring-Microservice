@@ -12,5 +12,5 @@ public class productDto {
     private int productId;
     private String productName;
     private String description;
-    private boolean forSale;
+    private int    forSale;
 }

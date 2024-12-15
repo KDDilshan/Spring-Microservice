@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface inventoryRepo extends JpaRepository<inventory, Integer> {
 
+    inventory findByItemId(int itemId);
+
 }

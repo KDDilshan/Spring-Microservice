@@ -25,7 +25,7 @@ public class productService {
     }
 
     public productDto getProductById(int id) {
-        product product =productRepo.findById(id).get();
+        product product =productRepo.findByProductId(id);
         return modelMapper.map(product,productDto.class);
     }
 

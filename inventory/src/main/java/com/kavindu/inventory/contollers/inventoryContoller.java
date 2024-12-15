@@ -15,14 +15,14 @@ public class inventoryContoller {
     @Autowired
     public inventoryService inventoryService;
 
-    @GetMapping("/iproducts")
+    @GetMapping("/items")
     public List<inventoryDto> getAllInventory(){
         return inventoryService.getAlInventoryProducts();
     }
 
-    @GetMapping("/iproduct/{id}")
-    public inventoryDto getInventoryById(@PathVariable int id){
-        return inventoryService.getoneProduct(id);
+    @GetMapping("/item/{itemId}")
+    public inventoryDto getItemByItemId(@PathVariable int itemId){
+        return inventoryService.getoneProduct(itemId);
     }
 
     @PostMapping("/create")
